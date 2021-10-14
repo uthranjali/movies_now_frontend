@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/movies.css" />
+  </head>
+  <body>
+    <div class="form_message"></div>
+    <div id="formdiv">
+      <form class="form-inline-justify-content-centre">
+        <div>
+          <label>Movie name</label>
+          <input
+            class="form-inline-justify-content-centre"
+            id="movie_name"
+            type="text"
+            name="movie"
+            placeholder="movie name"
+          />
+        </div>
+
+        <br /><br />
+        <div>
+          <label>Movie year</label>
+
+          <input
+            id="movie_year"
+            type="text"
+            name="movieyear"
+            placeholder="year"
+          />
+        </div>
+        <br /><br />
+        <div>
+          <label>Movie genres</label>
+          <input
+            id="movie_genre"
+            type="text"
+            name="moviegenre"
+            placeholder="genre"
+          />
+        </div>
+        <br /><br />
+        <button id="add_movie_button">Add movie</button>
+      </form>
+      <button id="list_movie_button" formmethod="GET">Movie list</button>
+    </div>
+    <script src="js/movies.js"></script>
+  </body>
+</html>

@@ -13,3 +13,19 @@ form {
   position: relative;
   margin: 10%;
 }
+.movies_list {
+  background-color: gray;
+  position: relative;
+  padding-left: 10%;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}

@@ -6,7 +6,7 @@ document.querySelector("#add_movie_button").addEventListener("click", e => {
     var movie_year =  document.querySelector("#movie_year").value;
     var movie_genre =  document.querySelector("#movie_genre").value;
 
-    var movie_data = {
+    let movie_data = {
         "title": movie_name,
         "year": movie_year,
         "genre": movie_genre
@@ -15,26 +15,43 @@ document.querySelector("#add_movie_button").addEventListener("click", e => {
     fetch(
         apiurl,
         {
-            method: "GET",
+            method: "POST",
             mode: "cors",
+            
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            // body: JSON.stringify(movie_data)
+            body: JSON.stringify(movie_data)
         }
     )
-    .then((res) => res.json)
+    .then((res) => res.json())
     .then((data) => {
         console.log(data)
-        // document.querySelector(".form_message").textContent = data["status"];
+        document.querySelector(".form_message").textContent = data["status"];
     })
     .catch((error) => {
         console.error(error);
     });
 });
 
-
+document.querySelector("#list_movie_button").addEventListener("click", e => {
+    e.preventDefault();
+    fetch(
+        apiurl,
+        {
+            method: "GET",
+            mode: "cors",
+            
+            
+        }
+    )
+    .then((res) => res.json())
+    .then(data => console.log(data)) 
+    .catch((error) => {
+        console.error(error);
+    });
+});
 // function name() {
 
 // }
